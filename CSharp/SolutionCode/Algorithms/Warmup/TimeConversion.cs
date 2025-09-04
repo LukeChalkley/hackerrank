@@ -8,14 +8,14 @@ public class TimeConversion
     public class Result
     {
         /*
-         * Complete the 'timeConversion' function below.
+         * Complete the 'manual' function below.
          *
          * The function is expected to return a STRING.
          * The function accepts STRING s as parameter.
          */
 
 
-        public static string timeConversion(string s)
+        public static string manual(string s)
         {
             int hour = Int32.Parse(s.Substring(0, 2));
             int minute = Int32.Parse(s.Substring(3, 2));
@@ -43,7 +43,7 @@ public class TimeConversion
             return sb.ToString();
         }
 
-        public static string timeConversionWithTimeStruct(string s)
+        public static string withStruct(string s)
         {
             TimeOnly timeOnly = TimeOnly.Parse(s);
 

@@ -3,23 +3,20 @@ using SolutionCode.Algorithms.Warmup;
 
 namespace nUnitTests;
 
+
+
+[Parallelizable(ParallelScope.Fixtures)]
 public class TimeConversionTests
 {
-    [SetUp]
-    public void Setup()
+    [TestCaseSource(typeof(TimeConversionTestData), nameof(TimeConversionTestData.TestCases))]
+    public string Manual(string input)
     {
-        
+        return TimeConversion.Result.manual(input);
     }
 
     [TestCaseSource(typeof(TimeConversionTestData), nameof(TimeConversionTestData.TestCases))]
-    public string TestRandomTimes(string input)
+    public string Struct(string input)
     {
-        return TimeConversion.Result.timeConversion(input);
-    }
-    
-    [TestCaseSource(typeof(TimeConversionTestData), nameof(TimeConversionTestData.TestCases))]
-    public string TestExamplesWithTimeOnly(string input)
-    {
-        return TimeConversion.Result.timeConversionWithTimeStruct(input);
+        return TimeConversion.Result.withStruct(input);
     }
 }

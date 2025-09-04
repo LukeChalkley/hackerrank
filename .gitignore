@@ -1,0 +1,12 @@
+# Ignore binaries and obj
+CSharp/SolutionCode/bin
+CSharp/SolutionCode/obj
+CSharp/Utilities/bin
+CSharp/Utilities/obj
+CSharp/nUnitTests/bin
+CSharp/nUnitTests/obj
+CSharp/ConsoleRunner/bin
+CSharp/ConsoleRunner/obj
+
+# ide
+CSharp/.idea
